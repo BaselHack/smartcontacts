@@ -9,7 +9,7 @@ use App\Http\Requests\StoreFormRequest;
 class FormController extends Controller
 {
 
-    public function store(StoreFormRequest $request)
+    public function subscribe(StoreFormRequest $request)
     {
         $meta = array('tags' => ['BaselHack','2017','BaselHack2017','Basel']);
 
@@ -21,7 +21,7 @@ class FormController extends Controller
 
         $form->save();
 
-        return redirect()->route('frontend.contact.index');
+        return redirect()->route('frontend.home.index');
     }
 
 }

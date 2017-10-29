@@ -2,10 +2,8 @@
 
 @section('content')
 
-
     @include('layouts.frontend.nav')
-
-
+    
     <section class="cover height-80 imagebg text-center parallax" data-overlay="5">
         <div class="background-image-holder background--top">
             <img alt="background" src="{{ asset('images/home_bg.jpg') }}"/>
@@ -169,18 +167,22 @@
                 <div class="row">
                     <div style="margin-top: 100px;" class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                         <h2>Our story - Prototyping</h2>
-                        <div class="col-md-6">
-                            <img alt="Image" src="{{ asset('images/qr_scan_1.png') }}"/>
-
-                        </div>
 
 
-                        <hr>
 
-                        <div class="col-md-6">
-                            <img alt="Image" src="{{ asset('images/qr_scan_2.png') }}"/>
+                    </div>
 
-                        </div>
+
+                    <div class="col-md-5 col-md-offset-1">
+                        <img alt="Image" src="{{ asset('images/qr_scan_1.jpg') }}"/>
+
+                    </div>
+
+
+                    <hr>
+
+                    <div class="col-md-5">
+                        <img alt="Image" src="{{ asset('images/qr_scan_2.jpg') }}"/>
 
                     </div>
                 </div>
@@ -245,15 +247,17 @@
                     <div class="cta">
                         <h2>Sign up for BaselHack 2018!</h2>
 
-                        <form class="text-left form-email">
+                        <form class="" method="POST" action="{{ route('frontend.subscribe') }}">
+                            {{ csrf_field() }}
 
                             <div class="col-sm-6">
-                                <input placeholder="Your Name" type="text" name="Name" class="validate-required"required autofocus>
+                                <input placeholder="Your Name" type="text" id="name" name="name" required autofocus>
                             </div>
                             <div class="col-sm-6">
-                                <input  placeholder="E-Mail Address" type="email" name="email" class="validate-required validate-email"required>
+                                <input  placeholder="E-Mail Address" type="email" name="email" required>
                             </div>
                             <div class="col-sm-12 col-md-12">
+
                                 <button type="submit" class="btn btn--block btn--primary type--uppercase">Become a part of BaselHack 2018</button>
                             </div>
                         </form>

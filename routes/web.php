@@ -20,7 +20,7 @@ Route::get('/contact', 'Frontend\FrontendController@contact')->name('frontend.co
 
 Route::post('/become-a-part', 'Frontend\FrontendController@register')->name('frontend.register.store');
 
-
+Route::post('/subscribe', 'Frontend\FormController@subscribe')->name('frontend.subscribe');
 
 Route::get('/happy-friends', 'Frontend\FrontendController@happy')->name('frontend.makefriend.success');
 
