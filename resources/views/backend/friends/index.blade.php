@@ -59,7 +59,7 @@
                 </div>
 
 
-                @if(!empty($user->hasManyContacts))
+                {{--@if(!empty($user->hasManyContacts))
                 <div class="panel panel-default">
                     <div class="panel-heading">Your friends</div>
 
@@ -100,7 +100,7 @@
 
                     </div>
                 </div>
-                @endif
+                @endif--}}
 
 
             </div>
