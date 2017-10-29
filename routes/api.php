@@ -14,4 +14,4 @@ use Illuminate\Http\Request;
 */
 
 
-Route::get('/makefriends/{email}/{uuid}', 'Api\ApiController@makefriends');
+Route::get('/makefriends/{email}/{friend}', 'Api\ApiController@makefriends');

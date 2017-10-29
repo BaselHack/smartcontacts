@@ -11,12 +11,17 @@ class ApiController extends Controller
 {
 
 
-    public function makefriends($email, $uuid)
+    public function makefriends($email, $friend)
     {
         try {
 
-            $contact = Contact::where('uuid', '=', $uuid)->first();
+           /* $contact = Contact::where('uuid', '=', $uuid)->first();*/
 
+
+            $friend = User::where('email', '=', $friend)->first();
+
+            $contact = Contact::where('user_id','=',$friend->id)->first();
+            
             $user = User::where('email', '=', $email)->first();
 
             $user->hasManyContacts()->attach($contact);
