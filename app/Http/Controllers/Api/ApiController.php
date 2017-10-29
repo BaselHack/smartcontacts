@@ -15,7 +15,7 @@ class ApiController extends Controller
             $data = $request->all();
 
             $user = User::where('email','=',$data['email'])->first();
-        
+
             return response()->json([
 
                 'uuid' => $user->contact->first()->uuid

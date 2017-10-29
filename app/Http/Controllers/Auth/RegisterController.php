@@ -62,24 +62,29 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-       /* try
-        {
-            $client = new Client([
-                'headers' => [ 'Content-Type' => 'application/json' ]
-            ]);
 
-            $response = $client->post(env('CARDDAV_URL') . 'api/create_carddav_user',
-                ['body' => json_encode(
-                    [
-                        'email' => $data['email']
-                    ]
-                )]
-            );
-        }
-        catch (\Exception $exception)
+        if(env('CARDDAV_STATUS'))
         {
-                //Queue -> LogResponse
-        }*/
+            try
+            {
+                $client = new Client([
+                    'headers' => [ 'Content-Type' => 'application/json' ]
+                ]);
+
+                $response = $client->post(env('CARDDAV_URL') . 'api/create_carddav_user',
+                    ['body' => json_encode(
+                        [
+                            'email' => $data['email']
+                        ]
+                    )]
+                );
+            }
+            catch (\Exception $exception)
+            {
+
+            }
+        }
+
 
         return User::create([
             'email' => $data['email'],

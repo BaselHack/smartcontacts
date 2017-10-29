@@ -27,9 +27,9 @@ class FriendController extends Controller
         $user->hasManyContacts()->attach($contact);
 
 
-        if(ini_set('max_execution_time', 200))
-        {
-           /* try
+        if (env('CARDDAV_STATUS')) {
+
+            try
             {
 
                 $client = new Client([
@@ -49,8 +49,9 @@ class FriendController extends Controller
             catch (\Exception $exception)
             {
 
-            }*/
+            }
         }
+
 
 
         return redirect()->route('backend.friends.index');
