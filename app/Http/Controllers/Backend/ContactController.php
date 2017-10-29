@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Contact;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreContactRequest;
+use App\Http\Requests\UpdateContactRequest;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 
@@ -75,7 +76,7 @@ class ContactController extends Controller
     }
 
 
-    public function update(StoreContactRequest $request, Contact $contact)
+    public function update(UpdateContactRequest $request, Contact $contact)
     {
 
         $contact->firstname = $request->firstname;
