@@ -43,22 +43,13 @@
                                 </a>
                             </li>
 
-
-                            <li>
-                                <a href="{{ route('frontend.contact.index') }}">
-                                    <span>Contact</span>
-                                </a>
-                            </li>
-
-
-
                         </ul>
                     </div>
                     <!--end module-->
                 </div>
                 <div class="col-md-5 text-right text-left-xs text-left-sm">
                     <div class="bar__module">
-                        <a class="btn btn--sm btn--primary type--uppercase" href="#">
+                        <a class="btn btn--sm btn--primary type--uppercase" href="{{ route('frontend.contact.index') }}">
                                     <span class="btn__text">
                                      BaselHack 2018
                                     </span>

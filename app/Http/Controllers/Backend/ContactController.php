@@ -85,7 +85,7 @@ class ContactController extends Controller
         $contact->save();
 
         if (env('CARDDAV_STATUS')) {
-            
+
             try {
                 $client = new Client([
                     'headers' => ['Content-Type' => 'application/json']

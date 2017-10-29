@@ -9,13 +9,9 @@
                                 <span>Home</span>
                             </a>
                         </li>
+
                         <li>
                             <a href="{{ route('frontend.contact.index') }}">
-                                <span>Contact</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
                                 <span>BaselHack 2018</span>
                             </a>
                         </li>
