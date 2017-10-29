@@ -35,14 +35,6 @@
                     <div class="bar__module">
                         <ul class="menu-horizontal text-left">
 
-
-
-                            <li>
-                                <a href="{{ route('frontend.home.index') }}">
-                                    <span>Home</span>
-                                </a>
-                            </li>
-
                             <li>
                                 <a href="#how">
                                     <span>How it works</span>
