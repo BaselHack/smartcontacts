@@ -5,16 +5,11 @@
                 <div class="heading-block">
                     <ul class="list-inline list--hover">
                         <li>
-                            <a href="{{ route('frontend.home.index') }}">
+                            <a href="#">
                                 <span>Home</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="{{ route('frontend.contact.index') }}">
-                                <span>BaselHack 2018</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
 
