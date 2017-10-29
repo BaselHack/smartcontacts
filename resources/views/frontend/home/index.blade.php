@@ -6,7 +6,6 @@
     @include('layouts.frontend.nav')
 
 
-    <div class="main-container">
     <section class="cover height-80 imagebg text-center parallax" data-overlay="5">
         <div class="background-image-holder background--top">
             <img alt="background" src="{{ asset('images/home_bg.jpg') }}"/>
@@ -27,8 +26,8 @@
     </section>
 
 
-        <section id="how" class="text-center">
-            <div class="container">
+        <section class="text-center">
+            <div  id="how" class="container">
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                         <h2>How it work's</h2>
@@ -139,11 +138,11 @@
         </section>
 
 
-        <section id="story" class="text-center">
-        <div class="container">
+        <section  class="text-center">
+        <div id="story" class="container">
             <div class="row">
                 <div style="margin-top: 100px;" class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                    <h2>Our story - BaselHack & Design Thinkin</h2>
+                    <h2>Our story - BaselHack & Design Thinking</h2>
                     <div class="col-md-12">
                         <img alt="Image" src="{{ asset('images/baselhack.png') }}"/>
 
@@ -219,9 +218,6 @@
             <div class="container">
                 <div class="row">
                     <div style="margin-top: 100px;" class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                        <h2>SmartContcats</h2>
-
-
 
 
                         <div class="col-md-12">
@@ -239,11 +235,11 @@
 
 
 
-    <section id="signup" class="text-center imagebg parallax" data-overlay="4">
+    <section  class="text-center imagebg parallax" data-overlay="4">
         <div class="background-image-holder">
             <img alt="background" src="{{asset('images/footer_bg.jpg')}}"/>
         </div>
-        <div class="container">
+        <div id="signup"class="container">
             <div class="row">
                 <div class="col-sm-10 col-md-8">
                     <div class="cta">
@@ -273,8 +269,6 @@
         @include('layouts.frontend.footer')
 
 
-
-    </div>
 
 
 @endsection
