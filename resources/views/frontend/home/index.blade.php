@@ -3,8 +3,8 @@
 @section('content')
 
     @include('layouts.frontend.nav')
-    
-    <section class="cover height-80 imagebg text-center parallax" data-overlay="5">
+
+    <section id="start" class="cover height-80 imagebg text-center parallax" data-overlay="5">
         <div class="background-image-holder background--top">
             <img alt="background" src="{{ asset('images/home_bg.jpg') }}"/>
         </div>
@@ -22,7 +22,6 @@
         </div>
         <!--end of container-->
     </section>
-
 
         <section class="text-center">
             <div  id="how" class="container">
@@ -54,7 +53,7 @@
                             <img alt="Image" src="{{ asset('images/process_3.png') }}"/>
 
                             <p class="lead">
-                                Your friend might get married and you don‘t have to take of anything.
+                                Your friend might get married and you don‘t have to take care of anything.
                             </p>
 
 

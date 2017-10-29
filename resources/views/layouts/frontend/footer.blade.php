@@ -3,14 +3,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="heading-block">
-                    <ul class="list-inline list--hover">
-                        <li>
-                            <a href="#">
-                                <span>Home</span>
-                            </a>
-                        </li>
 
-                    </ul>
                 </div>
 
                 <div>
