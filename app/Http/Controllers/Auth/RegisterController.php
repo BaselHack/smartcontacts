@@ -81,7 +81,7 @@ class RegisterController extends Controller
             }
             catch (\Exception $exception)
             {
-
+                //Queue -> LogResponse
             }
         }
 
