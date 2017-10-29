@@ -28,18 +28,17 @@ class ApiController extends Controller
 
     public function makefriends(Request $request)
     {
-        try
-        {
+        try {
             $data = $request->all();
 
-            $contact = Contact::where('uuid','=',$data['uuid'])->first();
+            $contact = Contact::where('uuid', '=', $data['uuid'])->first();
 
-            $user = User::where('email','=',$data['email'])->first();
+            $user = User::where('email', '=', $data['email'])->first();
 
             $user->hasManyContacts()->attach($contact);
 
-            return response()->json([
-            ], 200);
+            return redirect()->route('frontend.makefriend.success');
+
         }
         catch (\Exception $e)
         {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Contact;
 use App\Http\Controllers\Controller;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
