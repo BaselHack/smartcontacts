@@ -21,6 +21,10 @@ Route::get('/contact', 'Frontend\FrontendController@contact')->name('frontend.co
 Route::post('/become-a-part', 'Frontend\FrontendController@register')->name('frontend.register.store');
 
 
+
+Route::get('/happy-friends', 'Frontend\FrontendController@happy')->name('frontend.makefriend.success');
+
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/contacts', 'Backend\ContactController@index')->name('backend.contact.index');

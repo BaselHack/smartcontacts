@@ -10,30 +10,14 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
 
-    public function login(Request $request)
-    {
-            $data = $request->all();
 
-            $user = User::where('email','=',$data['email'])->first();
-
-            return response()->json([
-
-                'uuid' => $user->contact->first()->uuid
-
-            ], 200);
-
-    }
-
-
-
-    public function makefriends(Request $request)
+    public function makefriends($email, $uuid)
     {
         try {
-            $data = $request->all();
 
-            $contact = Contact::where('uuid', '=', $data['uuid'])->first();
+            $contact = Contact::where('uuid', '=', $uuid)->first();
 
-            $user = User::where('email', '=', $data['email'])->first();
+            $user = User::where('email', '=', $email)->first();
 
             $user->hasManyContacts()->attach($contact);
 

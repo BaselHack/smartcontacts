@@ -32,4 +32,11 @@ class FrontendController extends Controller
         return view('frontend.contact.index');
     }
 
+
+    public function happy()
+    {
+
+        return view('frontend.happy.index');
+    }
+
 }
