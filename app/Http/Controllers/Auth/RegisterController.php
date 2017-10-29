@@ -63,8 +63,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-       if(env('CARDDAV_STATUS'))
-        {
+        if (env('CARDDAV_STATUS')) {
             try {
                 $client = new Client([
                     'headers' => ['Content-Type' => 'application/json']
@@ -78,16 +77,16 @@ class RegisterController extends Controller
                     )]
                 );
 
-            }
-            catch (\Exception $exception)
-            {
+            } catch (\Exception $exception) {
                 //Queue -> LogResponse
             }
 
-        return User::create([
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+            return User::create([
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+
+        }
 
     }
 

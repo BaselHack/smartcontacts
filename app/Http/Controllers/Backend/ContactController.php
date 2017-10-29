@@ -48,6 +48,7 @@ class ContactController extends Controller
 
 
         if (env('CARDDAV_STATUS')) {
+
             try {
                 $client = new Client([
                     'headers' => ['Content-Type' => 'application/json']
