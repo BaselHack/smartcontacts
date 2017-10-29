@@ -15,16 +15,25 @@
 Auth::routes();
 
 
+Route::get('/', 'Frontend\FrontendController@home')->name('frontend.home.index');
+Route::get('/contact', 'Frontend\FrontendController@contact')->name('frontend.contact.index');
+
+Route::post('/become-a-part', 'Frontend\FrontendController@register')->name('frontend.register.store');
+
+
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/', 'ContactController@index')->name('backend.dashboard.index');
+    Route::get('/contacts', 'Backend\ContactController@index')->name('backend.contact.index');
 
-    Route::get('/contacts', 'ContactController@index')->name('backend.contact.index');
-    Route::post('/contacts', 'ContactController@store')->name('backend.contact.store');
-    Route::post('/contacts/update/{contact}', 'ContactController@update')->name('backend.contact.update');
+    Route::get('/contacts/create', 'Backend\ContactController@create')->name('backend.contact.create');
 
-    Route::get('/friends', 'FriendController@index')->name('backend.friends.index');
-    Route::post('/friends/update', 'FriendController@update')->name('backend.friends.update');
+    Route::get('/contacts/edit/{contact}', 'Backend\ContactController@edit')->name('backend.contact.edit');
+
+    Route::post('/contacts', 'Backend\ContactController@store')->name('backend.contact.store');
+    Route::post('/contacts/update/{contact}', 'Backend\ContactController@update')->name('backend.contact.update');
+
+    Route::get('/friends', 'Backend\FriendController@index')->name('backend.friends.index');
+    Route::post('/friends/update', 'Backend\FriendController@add')->name('backend.friends.add');
 
     Route::post('/adminsitrator', 'AdministratorController@index')->name('backend.administrator.index');
 

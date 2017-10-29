@@ -34,9 +34,9 @@ class User extends Authenticatable
     }
 
 
-    public function hasContacts()
+    public function hasManyContacts()
     {
-        return $this->hasMany(Contact::class);
+        return $this->belongsToMany(Contact::class,'user_has_contact');
     }
 
 

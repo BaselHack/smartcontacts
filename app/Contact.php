@@ -20,9 +20,9 @@ class Contact extends Model
     }
 
 
-    public function belongsToUser()
+    public function hasManyUser()
     {
-        return $this->belongsToMany(User::class,'user_has_contact','user_id');
+        return $this->hasMany(User::class);
     }
 
 }
